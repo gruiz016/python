@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
-# Copyright 2009-2017 BHG http://bw.org/
-
 hungry = True
+
+# ternary must have a if and else clause, it will not work unless this is present.
+
 x = 'Feed the bear now!' if hungry else 'Do not feed the bear.'
+
 print(x)
