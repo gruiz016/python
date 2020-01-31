@@ -1,13 +1,7 @@
-#!/usr/bin/env python3
-# bwDB - CRUD library for sqlite 3
-# by Bill Weinman [http://bw.org/]
-# Copyright 2010-2017 The BearHeart Group LLC
-# 1.2.0 - 2017-09-27 -
-#   lots of cleanup. uses f-strings so requires Python 3.6
-
 import sqlite3
 
 __version__ = '1.2.0'
+
 
 class bwDB:
     def __init__(self, **kwargs):
@@ -204,7 +198,7 @@ def test():
     # -- for file-based database
     # try: os.stat(fn)
     # except: pass
-    # else: 
+    # else:
     #     print('Delete', fn)
     #     os.unlink(fn)
 
@@ -216,7 +210,8 @@ def test():
 
     print('Create table ... ', end='')
     db.sql_do(f' DROP TABLE IF EXISTS {t} ')
-    db.sql_do(f' CREATE TABLE {t} ( id INTEGER PRIMARY KEY, string TEXT, number INTEGER ) ')
+    db.sql_do(
+        f' CREATE TABLE {t} ( id INTEGER PRIMARY KEY, string TEXT, number INTEGER ) ')
     print('Done.')
 
     print('Insert into table ... ', end='')
@@ -249,4 +244,5 @@ def test():
     db.close()
 
 
-if __name__ == "__main__": test()
+if __name__ == "__main__":
+    test()

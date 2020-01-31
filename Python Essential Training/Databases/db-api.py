@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-# Copyright 2009-2017 BHG http://bw.org/
-
 import sqlite3
+
 
 def main():
     print('connect')
@@ -40,4 +38,6 @@ def main():
     print('close')
     db.close()
 
-if __name__ == '__main__': main()
+
+if __name__ == '__main__':
+    main()
